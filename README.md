@@ -133,4 +133,3 @@ Each exercise follows this structure:
 
 ⚠️ Disclaimer
 This lab is conducted entirely within an isolated virtual environment on a personal machine. No external systems, networks, or third-party infrastructure are targeted. All activity is for educational purposes only.
-<img width="596" height="3310" alt="image" src="https://github.com/user-attachments/assets/9f46a293-3237-41cd-8c37-949570e09b55" />
