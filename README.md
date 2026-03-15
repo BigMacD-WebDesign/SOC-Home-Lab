@@ -40,41 +40,6 @@ Method	Details	Purpose
 rsyslog UDP 514	*.* @SIEM_IP:514	All system logs forwarded to Splunk
 	💡 The target VM runs Ubuntu 16.04 (GLIBC 2.23) which is incompatible with modern Splunk Universal Forwarder versions. rsyslog forwarding was implemented instead — a common real-world approach for legacy systems in enterprise SOC environments.
 
-📁 Repository Structure
-soc-home-lab/
-├── README.md
-├── setup/
-│   └── lab-architecture.md
-├── exercises/
-│   ├── 01-nmap-recon/
-│   │   ├── attack-notes.md
-│   │   └── screenshots/
-│   │       ├── exercise01-nmap-proftpd-detection.png
-│   │       ├── exercise01-full-log-results.png
-│   │       ├── exercise01-nmap-signature-detected.png
-│   │       ├── exercise01-nmap-evidence-pt1.png
-│   │       ├── exercise01-nmap-evidence-pt2.png
-│   │       └── exercise01-splunk-alert-saved.png
-│   ├── 02-exploitation/
-│   │   ├── attack-notes.md
-│   │   └── screenshots/
-│   │       ├── exercise02-proftpd-connection-spike.png
-│   │       ├── exercise02-proftpd-exploitation-detected.png
-│   │       ├── exercise02-attack-timeline.png
-│   │       └── exercise02-splunk-alert-saved.png
-│   └── 03-privilege-escalation/
-│       ├── attack-notes.md
-│       └── screenshots/
-│           ├── exercise03-tty-unknown-sudo.png
-│           ├── exercise03-tty-unknown-focused.png
-│           ├── exercise03-suspicious-command-detected.png
-│           └── exercise03-splunk-alert-saved.png
-├── detections/
-│   └── detection-rules.md
-├── splunk-spl-cheatsheet.md
-└── reports/
-    └── incident-report-template.md
-
 🔬 Exercises Completed
 #	Exercise	Techniques	Detection Method
 01	Network Reconnaissance	Nmap -A -T4 scan, service enumeration	Splunk alert on Nmap signatures in syslog — count > 3 triggers High severity alert
